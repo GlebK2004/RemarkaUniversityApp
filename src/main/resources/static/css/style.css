@@ -1,0 +1,56 @@
+.product:hover {
+    transition: 0.5s;
+    transform: scale(1.02);
+}
+
+.product-link {
+    color: #000 !important;
+    text-decoration: none
+}
+
+.texture{
+    background-image: url(/static/images/Текстура.jpg);
+    background-size: 50% auto;
+}
+
+.textureY{
+    background-image: url(/static/images/Текстура2.png);
+    background-size: 70% auto;
+}
+
+.textured-text {
+    background-image: url(/static/images/Текстура2.png);
+    background-clip: text;
+    -webkit-background-clip: text; /* Добавьте это для поддержки вебкит-браузеров */
+    color: transparent;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    animation: slideIn 0.5s ease-in-out forwards, fadeOut 2s 1.5s ease-in-out forwards;
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
