@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
                 <label for="searchCity">ВУЗ</label>
-                <select id="searchCity" required name="university" class="form-control">
+                <select id="searchCity" required name="territory" class="form-control">
                     <option value="">ВУЗ выбран</option>
 
                     <option value="БГУИР">БГУИР</option>
@@ -84,7 +84,7 @@
                         <p class="card-text">${product.hours} ч.</p>
                     </div>
                     <div class="card-footer">
-                        ${product.university}
+                        ${product.territory}
                     </div>
                 </div>
             </a>

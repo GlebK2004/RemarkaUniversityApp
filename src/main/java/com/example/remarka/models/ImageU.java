@@ -16,8 +16,8 @@ public class ImageU {
     @Lob
     private byte[] bytes;
     @OneToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
-    //@JoinColumn(name = "university")
-    private University university;
+    //@JoinColumn(name = "territory")
+    private Territory territory;
 
     public Long getId() {
         return id;
@@ -75,11 +75,11 @@ public class ImageU {
         this.bytes = bytes;
     }
 
-    public University getUniversity() {
-        return university;
+    public Territory getTerritory() {
+        return territory;
     }
 
-    public void setUniversity(University university) {
-        this.university = university;
+    public void setTerritory(Territory territory) {
+        this.territory = territory;
     }
 }

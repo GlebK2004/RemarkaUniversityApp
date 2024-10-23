@@ -213,7 +213,7 @@
                                 <tr>
                                     <th>${product_index + 1}</th>
                                     <th>${product.title}</th>
-                                    <th>${product.university}</th>
+                                    <th>${product.territory}</th>
                                     <th>${product.hours}</th>
                                 </tr>
                             <#else>

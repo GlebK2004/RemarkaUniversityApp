@@ -18,7 +18,7 @@ public class WorkloadController
 {
     private final UserService userService;
     private final ProductService productService;
-    private final UniversityService universityService;
+    private final TerritoryService territoryService;
     private final WorkloadService workloadService;
     @Autowired
     private EmailService emailService;
@@ -67,7 +67,7 @@ public class WorkloadController
     {
         User user = userService.getUserByPrincipal(principal);
         model.addAttribute("user", user);
-        model.addAttribute("countUniversities", universityService.countUniversities());
+        model.addAttribute("countUniversities", territoryService.countUniversities());
         model.addAttribute("countProducts", productService.countProducts());
         model.addAttribute("countUsers", userService.countUsers());
         model.addAttribute("sortedProducts", productService.sortedProducts());
@@ -79,10 +79,10 @@ public class WorkloadController
     {
         User user = userService.getUserByPrincipal(principal);
         model.addAttribute("user", user);
-        model.addAttribute("percentMinsk", universityService.cityPercent("Минск"));
-        model.addAttribute("percentGomel", universityService.cityPercent("Гомель"));
-        model.addAttribute("percentGrodno", universityService.cityPercent("Гродно"));
-        model.addAttribute("percentVitebsk", universityService.cityPercent("Витебск"));
+        model.addAttribute("percentMinsk", territoryService.cityPercent("Минск"));
+        model.addAttribute("percentGomel", territoryService.cityPercent("Гомель"));
+        model.addAttribute("percentGrodno", territoryService.cityPercent("Гродно"));
+        model.addAttribute("percentVitebsk", territoryService.cityPercent("Витебск"));
         return "dashboard2";
     }
 

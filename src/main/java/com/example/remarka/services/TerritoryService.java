@@ -1,7 +1,7 @@
 package com.example.remarka.services;
 
 import com.example.remarka.models.*;
-import com.example.remarka.repositories.UniversityRepository;
+import com.example.remarka.repositories.TerritoryRepository;
 import com.example.remarka.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,47 +15,47 @@ import java.util.List;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class UniversityService
+public class TerritoryService
 {
-    private final UniversityRepository universityRepository;
+    private final TerritoryRepository territoryRepository;
     private final UserRepository userRepository;
 
-    public List<University> listUniversities(String title) {
-        if (title != null) return universityRepository.findByName(title);
-        return universityRepository.findAll();
+    public List<Territory> listUniversities(String title) {
+        if (title != null) return territoryRepository.findByName(title);
+        return territoryRepository.findAll();
     }
 
     public int countUniversities(){
-        List<University> universities = universityRepository.findAll();
-        return universities.size();
+        List<Territory> Territories = territoryRepository.findAll();
+        return Territories.size();
     }
 
     public int cityPercent(String city){
-        List<University> universities = universityRepository.findAll();
-        List<University> universitiesCities = universityRepository.findAllByCity(city);
-        int percent = universitiesCities.size()*100/universities.size();
+        List<Territory> Territories = territoryRepository.findAll();
+        List<Territory> TerritoriesCities = territoryRepository.findAllByCity(city);
+        int percent = TerritoriesCities.size()*100/Territories.size();
         return percent;
     }
 
-    public void saveUniversity( University university, MultipartFile file1) throws IOException {
+    public void saveTerritory( Territory territory, MultipartFile file1) throws IOException {
         ImageU imageU;
         if (file1.getSize() != 0) {
             imageU = toImageEntity(file1);
             imageU.setPreviewImageU(true);
-            university.addImageToUniversity(imageU);
+            territory.addImageToTerritory(imageU);
         } else log.error("NO PHOTO");
 
-        log.info("Saving new University. Name: {}, City: {}", university.getName(), university.getCity() );
-        University productFromDb = universityRepository.save(university);
+        log.info("Saving new Territory. Name: {}, City: {}", territory.getName(), territory.getCity() );
+        Territory productFromDb = territoryRepository.save(territory);
         productFromDb.setPreviewImageId(productFromDb.getImageU().getId());
-        universityRepository.save(university);
+        territoryRepository.save(territory);
     }
 
-    public void deleteUniversity(Long id) {
-        University university = universityRepository.findById(id).orElse(null);
-        if (university != null) {
-            universityRepository.delete(university);
-            log.info("University with id = {} was deleted", id);
+    public void deleteTerritory(Long id) {
+        Territory territory = territoryRepository.findById(id).orElse(null);
+        if (territory != null) {
+            territoryRepository.delete(territory);
+            log.info("Territory with id = {} was deleted", id);
         } else {
             log.error("Product with id = {} is not found", id);
         }

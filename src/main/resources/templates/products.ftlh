@@ -36,7 +36,7 @@
                         <p class="card-text">${product.hours} ч.</p>
                     </div>
                     <div class="card-footer">
-                        ${product.university}
+                        ${product.territory}
                     </div>
                 </div>
             </a>

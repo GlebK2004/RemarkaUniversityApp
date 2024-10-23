@@ -3,7 +3,7 @@ package com.example.remarka.services;
 import com.example.remarka.models.Product;
 import com.example.remarka.models.User;
 import com.example.remarka.repositories.ProductRepository;
-import com.example.remarka.repositories.UniversityRepository;
+import com.example.remarka.repositories.TerritoryRepository;
 import com.example.remarka.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

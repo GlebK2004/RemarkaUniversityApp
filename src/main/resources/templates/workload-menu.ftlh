@@ -18,8 +18,8 @@
                 Предметы
             </a><br>
             <a class="btn btn-dark mb-3 texture" style="text-align: center; width: 100%"
-               href="/universities">
-                Университеты
+               href="/territories">
+                Территории
             </a><br>
             <a class="btn btn-dark mb-3 textureY" style="text-align: center; width: 100%"
                href="/workload">

@@ -5,9 +5,9 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "universities")
+@Table(name = "Territories")
 @Data
-public class University{
+public class Territory{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -15,11 +15,11 @@ public class University{
     private String city;
     private Long previewImageId;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "university")
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "territory")
     private ImageU imageU;
 
-    public void addImageToUniversity(ImageU imageU) {
-        imageU.setUniversity(this);
+    public void addImageToTerritory(ImageU imageU) {
+        imageU.setTerritory(this);
         this.imageU = imageU;
     }
 
