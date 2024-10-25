@@ -62,5 +62,12 @@ public class UserController {
         return "about-us";
     }
 
+    @GetMapping("/location")
+    public String location(Model model, Principal principal)
+    {
+        model.addAttribute("user", userService.getUserByPrincipal(principal));
+        return "location";
+    }
+
 
 }

@@ -17,15 +17,14 @@
         <title>ulc.by</title>
     </head>
     <body>
-    <nav class="navbar navbar-dark bg-dark texture">
+    <nav class="navbar navbar-dark bg-dark texture" style="height: 100px;">
         <div class="container-fluid">
             <a href="/">
-                <span class="navbar-brand mb-0 h1">ULC</span>
+                <img src="/static/images/ULC2.png" alt="ULC Logo" style="height: 90px;">
             </a>
 
 
-
-            <button class="btn btn-light my-2 my-sm-0 ml-auto mr-2 textureY" type="button"
+            <button class="btn btn-light my-2 my-sm-0 ml-auto mr-2 for-button" type="button"
                     onclick="window.location.href = '/workload-menu'">Добавить</button>
 
             <#if user.email??>

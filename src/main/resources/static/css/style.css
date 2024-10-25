@@ -37,6 +37,11 @@
     display: none;
 }
 
+button.for-button {
+    background-color: #3c4af5;
+    color: aliceblue;
+}
+
 @keyframes slideIn {
     from {
         transform: translateY(100%);
