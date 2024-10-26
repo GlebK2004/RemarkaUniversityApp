@@ -20,7 +20,7 @@ public class TerritoryService
     private final TerritoryRepository territoryRepository;
     private final UserRepository userRepository;
 
-    public List<Territory> listUniversities(String title) {
+    public List<Territory> listTerritories(String title) {
         if (title != null) return territoryRepository.findByName(title);
         return territoryRepository.findAll();
     }

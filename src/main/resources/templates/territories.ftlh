@@ -1,13 +1,14 @@
 <#import "blocks/template.ftlh" as t>
+<#import "blocks/footer.ftlh" as f>
 <@t.template user>
 
     <h1 style="text-align: center">Территории</h1>
     <hr>
-    <a class="btn btn-dark mt-3 mb-3 texture" style="text-align: center; width: 100%"
-       data-toggle="collapse" href="#collapseExample1" role="button"
-       aria-expanded="true" aria-controls="collapseExample">
-        Добавить новый адресс
-    </a>
+    <button class="btn btn-dark mt-3 mb-3 for-button" style="text-align: center; width: 100%"
+            data-toggle="collapse" data-target="#collapseExample1"
+            aria-expanded="true" aria-controls="collapseExample">
+        Добавить новый адрес
+    </button>
     <div class="collapse mb-3" id="collapseExample1" style="">
         <form action="/territory/create" method="post" enctype="multipart/form-data">
             <div class="form-group">
@@ -31,30 +32,32 @@
 
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
 
-            <button type="submit" style="width: 100%" class="btn btn-dark">Добавить</button>
+            <button type="submit" style="width: 100%" class="btn btn-light for-button">Добавить</button>
         </form>
     </div>
 
     <div class="card-columns">
         <#list Territories as territory>
 <#--            <a href="/territory/${territory.id}" class="product-link">-->
-                <div class="card text-white bg-dark my-3 product texture">
-                    <div class="card-top">
-                        <form action="/territory/delete/${territory.id}" method="post">
-                            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                            <button type="submit" class="btn m-3 textureY">
-                                Удалить
-                            </button>
-                        </form>
-                    </div>
-
-                    <div class="card-body">
-                        <img src="/image_u/${territory.previewImageId}"
-                             class="card-img-top">
-                        <h5 class="card-title">${territory.name}</h5>
-                        <p class="card-text">${territory.city} </p>
-                    </div>
+            <div class="card text-white bg-dark my-3 product textureCard" style="height: 400px;"> <!-- Установите нужную высоту -->
+                <div class="card-top">
+                    <img src="/image_u/${territory.previewImageId}" class="card-img-top" style="height: 200px; object-fit: cover;"> <!-- Задайте нужную высоту -->
                 </div>
+
+                <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10px; position: relative; height: 200px;">
+                    <div>
+                        <h5 class="card-title">${territory.name}</h5>
+                        <p class="card-text">${territory.city}</p>
+                    </div>
+                    <form action="/territory/delete/${territory.id}" method="post" style="margin-top: auto; text-align: right;">
+                        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                        <button type="submit" class="btn btn-danger for-button">
+                            Удалить
+                        </button>
+                    </form>
+                </div>
+            </div>
+
 <#--            </a>-->
         <#else>
             <h1 style="text-align: center">Не найдено</h1>
@@ -63,3 +66,6 @@
 
 
 </@t.template>
+
+<@f.template user>
+</@f.template>

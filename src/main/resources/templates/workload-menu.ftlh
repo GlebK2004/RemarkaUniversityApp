@@ -1,4 +1,5 @@
 <#import "blocks/template.ftlh" as t>
+<#import "blocks/footer.ftlh" as f>
 <@t.template user>
     <h1 style="text-align: center">Учебная нагрузка</h1>
     <hr>
@@ -32,3 +33,6 @@
         </#if>
     </div>
 </@t.template>
+
+<@f.template user>
+</@f.template>

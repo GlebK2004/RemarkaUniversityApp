@@ -3,6 +3,7 @@ package com.example.remarka.controllers;
 import com.example.remarka.models.Product;
 import com.example.remarka.models.User;
 import com.example.remarka.services.ProductService;
+import com.example.remarka.repositories.TerritoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,11 +20,13 @@ import java.security.Principal;
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
+    private final TerritoryRepository territoryRepository;
 
     @GetMapping("/")
     public String products(@RequestParam(name = "searchWord", required = false) String title, Principal principal, Model model) {
         model.addAttribute("products", productService.listProducts(title));
         model.addAttribute("user", productService.getUserByPrincipal(principal));
+        model.addAttribute("territories", territoryRepository.findAll());
         model.addAttribute("searchWord", title);
         return "products";
     }

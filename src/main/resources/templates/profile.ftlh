@@ -1,4 +1,5 @@
 <#import "blocks/template.ftlh" as t>
+<#import "blocks/footer.ftlh" as f>
 <@t.template user>
     <h1 style="text-align: center">Личный кабинет</h1>
     <hr>
@@ -16,20 +17,23 @@
         <br>
         <br>
         <#if user.isAdmin()>
-            <a class="btn btn-dark mb-3 texture" style="text-align: center; width: 100%"
-               href="/admin">
+            <button class="btn btn-dark mb-3 for-button" style="text-align: center; width: 100%"
+                    onclick="location.href='/admin';">
                 Панель администратора
-            </a><br>
+            </button>
         </#if>
-        <a class="btn btn-dark mb-3 texture" style="text-align: center; width: 100%"
-           href="/my/products">
-           Предметы
-        </a>
+        <button class="btn btn-dark mb-3 for-button" style="text-align: center; width: 100%"
+                onclick="location.href='/my/products';">
+            Предметы
+        </button>
         <form action="/logout" method="post">
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-            <button type="submit" style="text-align: center; width: 100%" class="btn mb-2 textureY">
+            <button type="submit" style="text-align: center; width: 100%" class="btn mb-2 btn-danger">
                 Выйти из аккаунта
             </button>
         </form>
     </div>
 </@t.template>
+
+<@f.template user>
+</@f.template>

@@ -1,13 +1,14 @@
 <#import "blocks/template.ftlh" as t>
+<#import "blocks/footer.ftlh" as f>
 <@t.template user>
     <h1 style="text-align: center">Авторизация</h1>
     <hr>
-    <form action="/login " method="post">
+    <form action="/login" method="post">
         <div class="form-group">
             <label for="email">Электронная почта</label>
             <input type="email" class="form-control <#if RequestParameters.error??>is-invalid</#if>" id="email" name="username">
             <div id="email" class="invalid-feedback">
-                Неверныя электронная почта
+                Неверная электронная почта
             </div>
         </div>
         <div class="form-group">
@@ -23,3 +24,6 @@
     <hr>
     <h2>Нет аккаунта? <a href="/registration">Зарегистрируйся!</a></h2>
 </@t.template>
+
+<@f.template user>
+</@f.template>

@@ -1,4 +1,5 @@
 <#import "blocks/template.ftlh" as t>
+<#import "blocks/footer.ftlh" as f>
 <@t.template admin>
 
     <h1> Выберите учебную дисциплину: </h1>
@@ -50,3 +51,6 @@
     </a><br>
 
 </@t.template>
+
+<@f.template user>
+</@f.template>

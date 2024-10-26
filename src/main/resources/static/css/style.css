@@ -13,9 +13,14 @@
     background-size: 50% auto;
 }
 
+.textureCard{
+    background-image: url(/static/images/card2.jpg);
+    background-size: 95% auto;
+}
+
 .textureY{
     background-image: url(/static/images/Текстура2.png);
-    background-size: 70% auto;
+    background-size: 50% auto;
 }
 
 .textured-text {

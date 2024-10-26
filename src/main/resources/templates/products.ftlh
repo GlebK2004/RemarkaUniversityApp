@@ -57,6 +57,26 @@
                 onclick="window.location.href = '/location'">Как нас найти</button>
     </div>
 
+    <br><h1 style="text-align: center">Где проходят наши занятия?</h1><hr>
+
+     <div class="card-columns">
+        <#list territories as territory>
+<#--            <a href="/territory/${territory.id}" class="product-link">-->
+            <div class="card text-white bg-dark my-3 product textureCard" style="height: 400px;"> <!-- Установите нужную высоту -->
+                <div class="card-top">
+                    <img src="/image_u/${territory.previewImageId}" class="card-img-top" style="height: 200px; object-fit: cover;"> <!-- Задайте нужную высоту -->
+                </div>
+
+                <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10px; position: relative; height: 200px;">
+                    <div>
+                        <h5 class="card-title">${territory.name}</h5>
+                        <p class="card-text">${territory.city}</p>
+                    </div>
+                </div>
+            </div>
+            </#list>
+     </div>
+
 <#--    <a class="btn btn-dark mb-3 texture" style="text-align: center; width: 100%"-->
 <#--       href="/dashboard2">-->
 <#--        Наши преимущества-->
@@ -64,5 +84,4 @@
 
 </@t.template>
 <@f.template user>
-
 </@f.template>

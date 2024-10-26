@@ -1,4 +1,5 @@
 <#import "blocks/template.ftlh" as t>
+<#import "blocks/footer.ftlh" as f>
 <@t.template user>
     <h1 style="text-align: center">Учебные предметы</h1>
     <hr>
@@ -93,3 +94,6 @@
         </#list>
     </div>
 </@t.template>
+
+<@f.template user>
+</@f.template>

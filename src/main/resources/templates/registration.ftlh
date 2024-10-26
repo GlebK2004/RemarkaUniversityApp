@@ -1,4 +1,5 @@
 <#import "blocks/template.ftlh" as t>
+<#import "blocks/footer.ftlh" as f>
 <@t.template user>
     <h1 style="text-align: center">Регистрация</h1>
     <hr>
@@ -26,3 +27,6 @@
         <h2 style="color: red">${errorMessage}</h2>
     </#if>
 </@t.template>
+
+<@f.template user>
+</@f.template>
