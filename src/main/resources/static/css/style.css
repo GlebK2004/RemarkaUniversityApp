@@ -64,3 +64,27 @@ button.for-button {
         opacity: 0;
     }
 }
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Для плавного пролистывания */
+    width: 100%;
+    /*max-width: 800px; !* Максимальная ширина слайдера *!*/
+    border: 2px solid #ccc; /* Граница слайдера */
+    border-radius: 10px; /* Закругленные углы */
+    background-color: white; /* Цвет фона слайдера */
+}
+
+.slide {
+    min-width: 50vw; /* Минимальная ширина слайда */
+    min-height: 33.33vw; /* Высота слайда с учетом соотношения 1.5:1 */
+    position: relative; /* Для размещения изображения внутри слайда */
+    scroll-snap-align: start; /* Для корректного выравнивания */
+}
+
+.slide img {
+    width: 100%; /* Ширина изображения */
+    height: auto; /* Автоматическая высота для сохранения соотношения сторон */
+    border-radius: 10px; /* Закругленные углы изображений */
+}

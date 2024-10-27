@@ -1,6 +1,61 @@
 <#import "blocks/template.ftlh" as t>
 <#import "blocks/footer.ftlh" as f>
 <@t.template user>
+
+    <h1 style="text-align: center">Urban Lang Club</h1>
+    <hr>
+
+    <br>
+    <br>
+    <div class="slider">
+        <div class="slide"><img src="/static/images/023A9299.jpg" alt="Strelka"></div>
+        <div class="slide"><img src="/static/images/023A0171.jpg" alt="Strelka"></div>
+        <div class="slide"><img src="/static/images/023A0139.jpg" alt="Strelka"></div>
+        <div class="slide"><img src="/static/images/023A9348.jpg" alt="Strelka"></div>
+    </div>
+
+    <br>
+    <h4> Urban Lang Club - специализированная школа, обучающая разговорным языкам по кембриджской методике
+        Кембриджская методика - это методика изучения разговорного языка через погружение в языковую среду.
+        Здесь нет скучных учебников и заучиваний правил: только моделирование ситуаций и постоянное общение.
+        Да, экзамены TOEFL с таким подходом не сдашь, зато язык изучается в 5 раз быстрее, чем по классической модели.
+        Уже через несколько месяцев вы начинаете свободно путешествовать, общаться с иностранцами или устраиваетесь на работу,
+        где требуется владение языком.
+        <br>
+        <br>
+        Школа ULC - одна из немногих в Минске, которая гарантирует результат по договору: либо Вы повышаете уровень языка
+        за курс, либо проходите повторное обучение за счет школы (бесплатно).</h4>
+    <hr>
+
+    <div class="d-flex justify-content-center" style="width: 100%;">
+        <button class="btn btn-light mx-2 for-button" style="flex-grow: 1; height: 50px;" type="button"
+                onclick="window.location.href = '/about-us'">О нас</button>
+        <button class="btn btn-light mx-2 for-button" style="flex-grow: 1; height: 50px; " type="button"
+                onclick="window.location.href = '/dashboard2'">Наши преимущества</button>
+        <button class="btn btn-light mx-2 for-button" style="flex-grow: 1; height: 50px;" type="button"
+                onclick="window.location.href = '/location'">Как нас найти</button>
+    </div>
+
+    <br><h1 style="text-align: center">Где проходят наши занятия?</h1><hr>
+
+     <div class="card-columns">
+        <#list territories as territory>
+<#--            <a href="/territory/${territory.id}" class="product-link">-->
+            <div class="card text-white bg-dark my-3 product textureCard" style="height: 400px;"> <!-- Установите нужную высоту -->
+                <div class="card-top">
+                    <img src="/image_u/${territory.previewImageId}" class="card-img-top" style="height: 200px; object-fit: cover;"> <!-- Задайте нужную высоту -->
+                </div>
+
+                <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10px; position: relative; height: 200px;">
+                    <div>
+                        <h5 class="card-title">${territory.name}</h5>
+                        <p class="card-text">${territory.city}</p>
+                    </div>
+                </div>
+            </div>
+            </#list>
+     </div>
+
     <h1 style="text-align: center">Найти группу</h1><hr>
     <form method="get" action="/">
         <div class="form-row">
@@ -44,43 +99,6 @@
             <h1 style="text-align: center">Не найдено</h1>
         </#list>
     </div>
-
-    <br>
-    <hr>
-
-    <div class="d-flex justify-content-center" style="width: 100%;">
-        <button class="btn btn-light mx-2 for-button" style="flex-grow: 1; height: 50px;" type="button"
-                onclick="window.location.href = '/about-us'">О нас</button>
-        <button class="btn btn-light mx-2 for-button" style="flex-grow: 1; height: 50px; " type="button"
-                onclick="window.location.href = '/dashboard2'">Наши преимущества</button>
-        <button class="btn btn-light mx-2 for-button" style="flex-grow: 1; height: 50px;" type="button"
-                onclick="window.location.href = '/location'">Как нас найти</button>
-    </div>
-
-    <br><h1 style="text-align: center">Где проходят наши занятия?</h1><hr>
-
-     <div class="card-columns">
-        <#list territories as territory>
-<#--            <a href="/territory/${territory.id}" class="product-link">-->
-            <div class="card text-white bg-dark my-3 product textureCard" style="height: 400px;"> <!-- Установите нужную высоту -->
-                <div class="card-top">
-                    <img src="/image_u/${territory.previewImageId}" class="card-img-top" style="height: 200px; object-fit: cover;"> <!-- Задайте нужную высоту -->
-                </div>
-
-                <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10px; position: relative; height: 200px;">
-                    <div>
-                        <h5 class="card-title">${territory.name}</h5>
-                        <p class="card-text">${territory.city}</p>
-                    </div>
-                </div>
-            </div>
-            </#list>
-     </div>
-
-<#--    <a class="btn btn-dark mb-3 texture" style="text-align: center; width: 100%"-->
-<#--       href="/dashboard2">-->
-<#--        Наши преимущества-->
-<#--    </a>-->
 
 </@t.template>
 <@f.template user>

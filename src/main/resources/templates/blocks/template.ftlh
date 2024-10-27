@@ -20,7 +20,7 @@
     <nav class="navbar navbar-dark bg-dark texture" style="height: 100px;">
         <div class="container-fluid">
             <a href="/">
-                <img src="/static/images/ULC2.png" alt="ULC Logo" style="height: 90px;">
+                <img src="/static/images/ULC2.png" alt="ULC Logo" style="height: 100px;">
             </a>
 
 
