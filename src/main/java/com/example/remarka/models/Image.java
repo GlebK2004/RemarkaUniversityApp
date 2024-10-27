@@ -16,7 +16,7 @@ public class Image {
     @Lob
     private byte[] bytes;
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
-    private Product product;
+    private Course course;
 
     public Long getId() {
         return id;
@@ -72,11 +72,11 @@ public class Image {
         this.bytes = bytes;
     }
 
-    public Product getProduct() {
-        return product;
+    public Course getCourse() {
+        return course;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setCourse(Course course) {
+        this.course = course;
     }
 }

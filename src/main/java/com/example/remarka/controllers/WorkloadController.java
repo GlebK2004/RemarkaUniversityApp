@@ -17,7 +17,7 @@ import java.security.Principal;
 public class WorkloadController
 {
     private final UserService userService;
-    private final ProductService productService;
+    private final CourseService courseService;
     private final TerritoryService territoryService;
     private final WorkloadService workloadService;
     @Autowired
@@ -26,7 +26,7 @@ public class WorkloadController
     @PostMapping("/send-email")
     public String sendEmail(@RequestBody EmailRequest request) {
         emailService.sendSimpleMessage(request.getTo(), request.getSubject(), request.getText());
-        return "redirect:/products";
+        return "redirect:/courses";
     }
 
     @GetMapping("/workload-menu")
@@ -51,13 +51,13 @@ public class WorkloadController
         model.addAttribute("user", user);
         model.addAttribute("admin", userService.getUserByPrincipal(principal));
         User admin = userService.getUserByPrincipal(principal);
-        model.addAttribute("products", admin.getProducts());
+        model.addAttribute("courses", admin.getCourses());
 
         return "workload-subject";
     }
 
     @PostMapping("/add-workload/done")
-    public String addSubject( @RequestParam("user") User user, @RequestParam("productTitle") String title) throws IOException {
+    public String addSubject( @RequestParam("user") User user, @RequestParam("courseTitle") String title) throws IOException {
         workloadService.addWorkload(user, title);
         return "redirect:/workload";
     }
@@ -68,9 +68,9 @@ public class WorkloadController
         User user = userService.getUserByPrincipal(principal);
         model.addAttribute("user", user);
         model.addAttribute("countUniversities", territoryService.countUniversities());
-        model.addAttribute("countProducts", productService.countProducts());
+        model.addAttribute("countCourses", courseService.countCourses());
         model.addAttribute("countUsers", userService.countUsers());
-        model.addAttribute("sortedProducts", productService.sortedProducts());
+        model.addAttribute("sortedCourses", courseService.sortedCourses());
         return "dashboard";
     }
 

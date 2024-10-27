@@ -16,15 +16,15 @@
     <h1 style="text-align: center">Предметы пользователя ${user.name}</h1>
     <br>
     <div class="card-columns">
-        <#list products as product>
-            <a href="/product/${product.id}" class="product-link">
-                <div class="card text-white bg-dark my-3 product">
+        <#list courses as course>
+            <a href="/course/${course.id}" class="course-link">
+                <div class="card text-white bg-dark my-3 course">
 
-                    <img src="/images/${product.previewImageId}"
+                    <img src="/images/${course.previewImageId}"
                          class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">${product.title}</h5>
-                        <p class="card-text">${product.hours} ч.</p>
+                        <h5 class="card-title">${course.title}</h5>
+                        <p class="card-text">${course.hours} ч.</p>
                     </div>
                 </div>
             </a>

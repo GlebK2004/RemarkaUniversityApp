@@ -23,7 +23,7 @@
             </button>
         </#if>
         <button class="btn btn-dark mb-3 for-button" style="text-align: center; width: 100%"
-                onclick="location.href='/my/products';">
+                onclick="location.href='/my/courses';">
             Предметы
         </button>
         <form action="/logout" method="post">

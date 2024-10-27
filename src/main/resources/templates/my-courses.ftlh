@@ -12,11 +12,11 @@
     </a>
     <div class="collapse mb-3" id="collapseExample" style="">
 
-        <form action="/product/create" method="post" enctype="multipart/form-data">
+        <form action="/course/create" method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="productName">Название предмет</label>
+                <label for="courseName">Название предмет</label>
                 <input type="text" required class="form-control"
-                       id="productName" name="title">
+                       id="courseName" name="title">
             </div>
             <div class="form-group">
                 <label for="hours">Количество часов</label>
@@ -67,25 +67,25 @@
         </#if>
     </div>
     <div class="card-columns">
-        <#list products as product>
-            <a href="/product/${product.id}" class="product-link">
-                <div class="card text-white bg-dark my-3 product texture">
+        <#list courses as course>
+            <a href="/course/${course.id}" class="course-link">
+                <div class="card text-white bg-dark my-3 course texture">
                     <div class="card-top">
-                        <form action="/product/delete/${product.id}" method="post">
+                        <form action="/course/delete/${course.id}" method="post">
                             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                             <button type="submit" class="btn m-3 textureY">
                                 Удалить
                             </button>
                         </form>
                     </div>
-                    <img src="/images/${product.previewImageId}"
+                    <img src="/images/${course.previewImageId}"
                          class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">${product.title}</h5>
-                        <p class="card-text">${product.hours} ч.</p>
+                        <h5 class="card-title">${course.title}</h5>
+                        <p class="card-text">${course.hours} ч.</p>
                     </div>
                     <div class="card-footer">
-                        ${product.territory}
+                        ${course.territory}
                     </div>
                 </div>
             </a>

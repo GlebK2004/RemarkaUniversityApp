@@ -5,19 +5,19 @@
     <h1> Выберите учебную дисциплину: </h1>
     <br>
     <div class="card-columns">
-        <#list products as product>
+        <#list courses as course>
             <a>
-                <div class="card text-white bg-dark my-3 product">
-                    <img src="/images/${product.previewImageId}"
+                <div class="card text-white bg-dark my-3 course">
+                    <img src="/images/${course.previewImageId}"
                          class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">${product.title}</h5>
-                        <p class="card-text">${product.hours} ч.</p>
+                        <h5 class="card-title">${course.title}</h5>
+                        <p class="card-text">${course.hours} ч.</p>
                     </div>
                     <div class="card-footer">
 
 <#--                        <form  action="/add-workload/done" method="post" enctype="multipart/form-data">-->
-<#--                            <input type="hidden" name="productTitle" id="productTitle" value="${product.title}" />-->
+<#--                            <input type="hidden" name="courseTitle" id="courseTitle" value="${course.title}" />-->
 <#--                            <input type="hidden" name="user" id ="user" value="${user}" />-->
 <#--                        <button id="myButton" class="btn btn-light my-2 my-sm-0 ml-auto mr-2 textureY">✓</button>-->
 <#--                            -->

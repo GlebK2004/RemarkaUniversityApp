@@ -19,7 +19,7 @@
                     <div class="container">
                         <div class="carousel-caption">
                             <a href="/images/${image.id}">
-                                <img class="product" style="height: 100px" src="/images/${image.id}">
+                                <img class="course" style="height: 100px" src="/images/${image.id}">
                             </a>
                         </div>
                     </div>
@@ -37,14 +37,14 @@
         </a>
     </div>
     <hr>
-    <p><h1 style="text-align: center">${product.title} | ${product.hours} ч.</h1></p>
-    <p style="text-align: center">${product.description}</p>
-    <p style="text-align: center">Номер телефона: <b>${authorProduct.phoneNumber}</b></p>
+    <p><h1 style="text-align: center">${course.title} | ${course.hours} ч.</h1></p>
+    <p style="text-align: center">${course.description}</p>
+    <p style="text-align: center">Номер телефона: <b>${authorCourse.phoneNumber}</b></p>
 
     <hr>
     <p style="text-align: center">
-        <a href="/user/${authorProduct.id}">
-            <img src="/static/images/avatar.png" alt="mdo" width="32" height="32" class="rounded-circle"> ${authorProduct.name}
+        <a href="/user/${authorCourse.id}">
+            <img src="/static/images/avatar.png" alt="mdo" width="32" height="32" class="rounded-circle"> ${authorCourse.name}
         </a>
     </p>
 

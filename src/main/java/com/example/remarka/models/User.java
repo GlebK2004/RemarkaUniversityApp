@@ -34,11 +34,11 @@ public class User implements UserDetails {
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER,
     mappedBy = "user")
-    private List<Product> products = new ArrayList<>();
+    private List<Course> courses = new ArrayList<>();
 
-    public void addProductToUser(Product product) {
-        product.setUser(this);
-        products.add(product);
+    public void addCourseToUser(Course course) {
+        course.setUser(this);
+        courses.add(course);
     }
 
     public boolean isAdmin() {
@@ -53,12 +53,12 @@ public class User implements UserDetails {
         this.avatar = avatar;
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public List<Course> getCourses() {
+        return courses;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
     }
 
     public Long getId() {

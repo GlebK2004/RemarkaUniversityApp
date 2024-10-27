@@ -46,8 +46,8 @@ public class TerritoryService
         } else log.error("NO PHOTO");
 
         log.info("Saving new Territory. Name: {}, City: {}", territory.getName(), territory.getCity() );
-        Territory productFromDb = territoryRepository.save(territory);
-        productFromDb.setPreviewImageId(productFromDb.getImageU().getId());
+        Territory courseFromDb = territoryRepository.save(territory);
+        courseFromDb.setPreviewImageId(courseFromDb.getImageU().getId());
         territoryRepository.save(territory);
     }
 
@@ -57,7 +57,7 @@ public class TerritoryService
             territoryRepository.delete(territory);
             log.info("Territory with id = {} was deleted", id);
         } else {
-            log.error("Product with id = {} is not found", id);
+            log.error("Course with id = {} is not found", id);
         }
     }
 

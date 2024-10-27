@@ -40,8 +40,8 @@
 
      <div class="card-columns">
         <#list territories as territory>
-<#--            <a href="/territory/${territory.id}" class="product-link">-->
-            <div class="card text-white bg-dark my-3 product textureCard" style="height: 400px;"> <!-- Установите нужную высоту -->
+<#--            <a href="/territory/${territory.id}" class="course-link">-->
+            <div class="card text-white bg-dark my-3 course textureCard" style="height: 400px;"> <!-- Установите нужную высоту -->
                 <div class="card-top">
                     <img src="/image_u/${territory.previewImageId}" class="card-img-top" style="height: 200px; object-fit: cover;"> <!-- Задайте нужную высоту -->
                 </div>
@@ -80,18 +80,18 @@
     </form>
     <hr>
     <div class="card-columns">
-        <#list products as product>
-            <a href="/product/${product.id}" class="product-link">
-                <div class="card text-white bg-dark my-3 product texture">
+        <#list courses as course>
+            <a href="/course/${course.id}" class="course-link">
+                <div class="card text-white bg-dark my-3 course texture">
 
-                    <img src="/images/${product.previewImageId}"
+                    <img src="/images/${course.previewImageId}"
                          class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">${product.title}</h5>
-                        <p class="card-text">${product.hours} ч.</p>
+                        <h5 class="card-title">${course.title}</h5>
+                        <p class="card-text">${course.hours} ч.</p>
                     </div>
                     <div class="card-footer">
-                        ${product.territory}
+                        ${course.territory}
                     </div>
                 </div>
             </a>

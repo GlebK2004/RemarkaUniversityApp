@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "products")
+@Table(name = "courses")
 @Data
-public class Product {
+public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,7 +19,7 @@ public class Product {
     private Integer hours;
     private String territory;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,
-    mappedBy = "product")
+    mappedBy = "course")
     private List<Image> images = new ArrayList<>();
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     @JoinColumn
@@ -31,8 +31,8 @@ public class Product {
     private void onCreate() { dateOfCreated = LocalDateTime.now(); }
 
 
-    public void addImageToProduct(Image image) {
-        image.setProduct(this);
+    public void addImageToCourse(Image image) {
+        image.setCourse(this);
         images.add(image);
     }
 }

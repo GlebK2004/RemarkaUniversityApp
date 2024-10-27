@@ -38,8 +38,8 @@
 
     <div class="card-columns">
         <#list Territories as territory>
-<#--            <a href="/territory/${territory.id}" class="product-link">-->
-            <div class="card text-white bg-dark my-3 product textureCard" style="height: 400px;"> <!-- Установите нужную высоту -->
+<#--            <a href="/territory/${territory.id}" class="course-link">-->
+            <div class="card text-white bg-dark my-3 course textureCard" style="height: 400px;"> <!-- Установите нужную высоту -->
                 <div class="card-top">
                     <img src="/image_u/${territory.previewImageId}" class="card-img-top" style="height: 200px; object-fit: cover;"> <!-- Задайте нужную высоту -->
                 </div>

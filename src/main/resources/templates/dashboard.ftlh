@@ -146,7 +146,7 @@
                                 <i class="fa fa-list fa-4x"></i>
                             </div>
                             <h6 class="text-uppercase" style="color: black">Предметы</h6>
-                            <h1 class="display-1" style="color: black">${countProducts}</h1>
+                            <h1 class="display-1" style="color: black">${countCourses}</h1>
                         </div>
                     </div>
                 </div>
@@ -209,12 +209,12 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <#list sortedProducts as product>
+                            <#list sortedCourses as course>
                                 <tr>
-                                    <th>${product_index + 1}</th>
-                                    <th>${product.title}</th>
-                                    <th>${product.territory}</th>
-                                    <th>${product.hours}</th>
+                                    <th>${course_index + 1}</th>
+                                    <th>${course.title}</th>
+                                    <th>${course.territory}</th>
+                                    <th>${course.hours}</th>
                                 </tr>
                             <#else>
                                 <h3>Пользователей нет</h3>

@@ -1,8 +1,8 @@
 package com.example.remarka.services;
 
-import com.example.remarka.models.Product;
+import com.example.remarka.models.Course;
 import com.example.remarka.models.User;
-import com.example.remarka.repositories.ProductRepository;
+import com.example.remarka.repositories.CourseRepository;
 import com.example.remarka.repositories.TerritoryRepository;
 import com.example.remarka.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,16 +18,16 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class WorkloadService {
 
-    private final ProductRepository productRepository;
+    private final CourseRepository courseRepository;
 
     public void addWorkload(User user, String title) throws IOException {
-    List<Product> products = productRepository.findByTitle(title);
-        Product product = null; // Инициализация переменной
-        if (!products.isEmpty()) {
-            product = products.get(0); // Получаем первый элемент из списка
+    List<Course> courses = courseRepository.findByTitle(title);
+        Course course = null; // Инициализация переменной
+        if (!courses.isEmpty()) {
+            course = courses.get(0); // Получаем первый элемент из списка
         }
-    product.setUser(user);
-    productRepository.save(product);
+    course.setUser(user);
+    courseRepository.save(course);
 
 
 }
