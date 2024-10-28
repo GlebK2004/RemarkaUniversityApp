@@ -17,10 +17,10 @@
         <title>ulc.by</title>
     </head>
     <body>
-    <nav class="navbar navbar-dark bg-dark texture" style="height: 100px;">
+    <nav class="navbar navbar-dark bg-dark texture" style="height: 120px;">
         <div class="container-fluid">
             <a href="/">
-                <img src="/static/images/ULC2.png" alt="ULC Logo" style="height: 100px;">
+                <img src="/static/images/ULC2.png" alt="ULC Logo" style="height: 140px;">
             </a>
 
 

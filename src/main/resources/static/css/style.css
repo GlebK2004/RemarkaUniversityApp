@@ -88,3 +88,8 @@ button.for-button {
     height: auto; /* Автоматическая высота для сохранения соотношения сторон */
     border-radius: 10px; /* Закругленные углы изображений */
 }
+
+.scale-56 {
+    transform: scale(0.56);
+    transform-origin: top left; /* Или center, если нужно */
+}

@@ -129,46 +129,46 @@
 
             <div class="row mb-3">
                 <div class="col-xl-3 col-lg-6">
-                    <div class="card card-inverse card-success">
-                        <div class="card-block bg-success textureY">
+                    <div class="card card-inverse card-danger">
+                        <div class="card-block bg-danger">
                             <div class="rotate">
-                                <i class="fa fa-user fa-5x"></i>
+                                <i class="fa fa-user fa-5x" style="color:aliceblue"></i>
                             </div>
-                            <h6 class="text-uppercase" style="color: black">Преподаватели</h6>
-                            <h1 class="display-1" style="color: black">${countUsers}</h1>
+                            <h6 class="text-uppercase" style="color: aliceblue">Преподаватели</h6>
+                            <h1 class="display-1" style="color: aliceblue">${countUsers}</h1>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-6">
-                    <div class="card card-inverse card-danger textureY">
-                        <div class="card-block bg-danger textureY">
+                    <div class="card card-inverse card-danger">
+                        <div class="card-block bg-danger ">
                             <div class="rotate">
-                                <i class="fa fa-list fa-4x"></i>
+                                <i class="fa fa-list fa-4x" style="color:aliceblue"></i>
                             </div>
-                            <h6 class="text-uppercase" style="color: black">Предметы</h6>
-                            <h1 class="display-1" style="color: black">${countCourses}</h1>
+                            <h6 class="text-uppercase" style="color:aliceblue">Группы</h6>
+                            <h1 class="display-1" style="color:aliceblue">${countCourses}</h1>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-6">
-                    <div class="card card-inverse card-info">
-                        <div class="card-block bg-info textureY">
+                    <div class="card card-inverse card-danger">
+                        <div class="card-block bg-danger">
                             <div class="rotate">
-                                <i class="fa fa-twitter fa-5x"></i>
+                                <i class="fa fa-twitter fa-5x" style="color:aliceblue"></i>
                             </div>
-                            <h6 class="text-uppercase" style="color: black">Университеты</h6>
-                            <h1 class="display-1" style="color: black">${countUniversities}</h1>
+                            <h6 class="text-uppercase" style="color:aliceblue">Территории</h6>
+                            <h1 class="display-1" style="color:aliceblue">${countUniversities}</h1>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-6">
-                    <div class="card card-inverse card-warning">
-                        <div class="card-block bg-warning texture">
+                    <div class="card card-inverse">
+                        <div class="card-block texture">
                             <div class="rotate">
-                                <i class="fa fa-share fa-5x" style="color: gold;"></i>
+                                <i class="fa fa-share fa-5x" style="color:aliceblue"></i>
                             </div>
-                            <h6 class="text-uppercase" style="color: gold">Администраторы</h6>
-                            <h1 class="display-1" style="color: gold">2</h1>
+                            <h6 class="text-uppercase" style="color: aliceblue">Администраторы</h6>
+                            <h1 class="display-1" style="color:aliceblue">2</h1>
                         </div>
                     </div>
                 </div>
@@ -180,8 +180,8 @@
             <a id="features"></a>
             <hr>
             <p class="lead">
-                Ремарка - система автоматизации процессов формирования и распределения учебной нагрузки
-                профессорско-преподавательского персонала учреждения высшего образования #1
+                ULC — обучение английскому и другим иностранным языкам в Минске.
+                Онлайн и офлайн занятия для детей и взрослых по коммуникативной методике.
             </p>
 
             <hr>
@@ -229,23 +229,26 @@
 
             <a id="layouts"></a>
             <hr>
-            <h2 class="sub-header">Университеты</h2>
+            <h2 class="sub-header">Уровни языка</h2>
             <div class="row mb-3">
 
                 <div class="col-lg-6">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home1" role="tab" data-toggle="tab">БГУ</a>
+                            <a class="nav-link active" href="#home1" role="tab" data-toggle="tab">A1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#profile1" role="tab" data-toggle="tab">БГУИР</a>
+                            <a class="nav-link" href="#profile1" role="tab" data-toggle="tab">A2</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#messages1" role="tab" data-toggle="tab">БНТУ</a>
+                            <a class="nav-link" href="#messages1" role="tab" data-toggle="tab">B1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#settings1" role="tab" data-toggle="tab">МГЛУ</a>
+                            <a class="nav-link" href="#settings1" role="tab" data-toggle="tab">B2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#settings2" role="tab" data-toggle="tab">C1</a>
                         </li>
                     </ul>
 
@@ -253,33 +256,43 @@
                     <div class="tab-content">
                         <br>
                         <div role="tabpanel" class="tab-pane active" id="home1">
-                            <h4>БГУ</h4>
+                            <h4>A1</h4>
                             <p>
-                                Белорусский государственный университет
-
-
+                                A1 – Beginner, Elementary – начальный уровень<br>
                             </p>
+                            <img src="/static/images/levels/a1.png" alt="a1">
                         </div>
                         <div role="tabpanel" class="tab-pane" id="profile1">
-                            <h4>БГУИР</h4>
+                            <h4>A2</h4>
                             <p>
-                                Белорусский государственный университет информатики и радиоэлектроники
+                                A2 – Pre-Intermediate – базовый уровень, ниже среднего<br>
                             </p>
+                            <img src="/static/images/levels/a2.png" alt="a2"  class="scale-56">
                         </div>
                         <div role="tabpanel" class="tab-pane" id="messages1">
-                            <h4>БНТУ</h4>
+                            <h4>B1</h4>
                             <p>
-                                Белорусский национальный технический университет
+                                B1 – Intermediate – средний уровень<br>
                             </p>
+                            <img src="/static/images/levels/b1.png" alt="b1"  class="scale-56">
                         </div>
                         <div role="tabpanel" class="tab-pane" id="settings1">
-                            <h4>МГЛУ</h4>
+                            <h4>B2</h4>
                             <p>
-                                Минский государственный лингвистический университет
+                                B2 – Upper-Intermediate – уровень выше среднего<br>
                             </p>
+                            <img src="/static/images/levels/b2.png" alt="b2" class="scale-56">
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="settings2">
+                            <h4>C1</h4>
+                            <p>
+                                C1 – Advanced – продвинутый уровень<br>
+                            </p>
+                            <img src="/static/images/levels/c1.png" alt="c1" class="scale-56">
                         </div>
                     </div>
                 </div>
+                <br><br><br>
 
 <#--                <!--/col&ndash;&gt;-->
 <#--                <div class="col-lg-6">-->
@@ -407,6 +420,7 @@
 </body>
 
 </@t.template>
+<br><br><br>
 <@f.template user>
 
 </@f.template>

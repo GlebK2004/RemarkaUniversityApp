@@ -8,10 +8,10 @@
     <br>
     <br>
     <div class="slider">
-        <div class="slide"><img src="/static/images/023A9299.jpg" alt="Strelka"></div>
-        <div class="slide"><img src="/static/images/023A0171.jpg" alt="Strelka"></div>
-        <div class="slide"><img src="/static/images/023A0139.jpg" alt="Strelka"></div>
-        <div class="slide"><img src="/static/images/023A9348.jpg" alt="Strelka"></div>
+        <div class="slide"><img src="/static/images/slider/023A9299.jpg" alt="Strelka"></div>
+        <div class="slide"><img src="/static/images/slider/023A0171.jpg" alt="Strelka"></div>
+        <div class="slide"><img src="/static/images/slider/023A0139.jpg" alt="Strelka"></div>
+        <div class="slide"><img src="/static/images/slider/023A9348.jpg" alt="Strelka"></div>
     </div>
 
     <br>
@@ -31,12 +31,12 @@
         <button class="btn btn-light mx-2 for-button" style="flex-grow: 1; height: 50px;" type="button"
                 onclick="window.location.href = '/about-us'">О нас</button>
         <button class="btn btn-light mx-2 for-button" style="flex-grow: 1; height: 50px; " type="button"
-                onclick="window.location.href = '/dashboard2'">Наши преимущества</button>
+                onclick="window.location.href = '/dashboard'">Наши преимущества</button>
         <button class="btn btn-light mx-2 for-button" style="flex-grow: 1; height: 50px;" type="button"
                 onclick="window.location.href = '/location'">Как нас найти</button>
     </div>
 
-    <br><h1 style="text-align: center">Где проходят наши занятия?</h1><hr>
+    <br><br><br><h1 style="text-align: center">Где проходят наши занятия?</h1><hr>
 
      <div class="card-columns">
         <#list territories as territory>
@@ -56,6 +56,7 @@
             </#list>
      </div>
 
+    <br><br>
     <h1 style="text-align: center">Найти группу</h1><hr>
     <form method="get" action="/">
         <div class="form-row">
