@@ -118,7 +118,7 @@
             <h1 class="display-2 hidden-xs-down">
                 Аналитика
             </h1>
-            <p class="lead hidden-xs-down">remarka.by</p>
+            <p class="lead hidden-xs-down">ulc.by</p>
 
             <div class="alert alert-warning fade collapse" role="alert" id="myAlert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">

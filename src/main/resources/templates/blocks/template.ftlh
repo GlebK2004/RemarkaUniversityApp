@@ -18,11 +18,10 @@
     </head>
     <body>
     <nav class="navbar navbar-dark bg-dark texture" style="height: 120px;">
-        <div class="container-fluid">
-            <a href="/">
-                <img src="/static/images/ULC2.png" alt="ULC Logo" style="height: 140px;">
+        <div class="container-fluid d-flex align-items-center" style="height: 100%;">
+            <a href="/" class="mr-2">
+                <img src="/static/images/ULC2.png" alt="ULC Logo" style="height: 80px;"> <!-- Уменьшена высота логотипа для центрирования -->
             </a>
-
 
             <button class="btn btn-light my-2 my-sm-0 ml-auto mr-2 for-button" type="button"
                     onclick="window.location.href = '/workload-menu'">Добавить</button>
