@@ -18,8 +18,14 @@
     background-size: 50% auto;
 }
 
+
 .textureCard{
     background-image: url(/static/images/card2.jpg);
+    background-size: 95% auto;
+}
+
+.textureCard1{
+    background-image: url(/static/images/card.jpg);
     background-size: 95% auto;
 }
 

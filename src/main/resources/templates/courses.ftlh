@@ -82,20 +82,21 @@
     <hr>
     <div class="card-columns">
         <#list courses as course>
-            <a href="/course/${course.id}" class="course-link">
-                <div class="card text-white bg-dark my-3 course texture">
-
-                    <img src="/images/${course.previewImageId}"
-                         class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">${course.title}</h5>
-                        <p class="card-text">${course.hours} ч.</p>
-                    </div>
-                    <div class="card-footer">
-                        ${course.territory}
-                    </div>
+        <#--            <a href="/territory/${territory.id}" class="course-link">-->
+            <div class="card text-white bg-dark my-3 course textureCard1" style="height: 400px; "> <!-- Установите нужную высоту -->
+                <div class="card-top">
+                    <img src="/images/${course.previewImageId}" class="card-img-top" style="height: 200px; object-fit: cover;"> <!-- Задайте нужную высоту -->
                 </div>
-            </a>
+
+                <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10px; position: relative; height: 200px;">
+                    <div>
+                        <h3 class="card-title">${course.title}</h3>
+                        <p class="card-text" style="font-size: 1.5rem">${course.hours} ч.</p>
+                        <p class="card-text" style="font-size: 1.5rem">${course.description}</p>
+                    </div>
+
+                </div>
+            </div>
         <#else>
             <h1 style="text-align: center">Не найдено</h1>
         </#list>

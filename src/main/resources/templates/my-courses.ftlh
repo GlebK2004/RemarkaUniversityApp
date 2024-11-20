@@ -1,20 +1,20 @@
 <#import "blocks/template.ftlh" as t>
 <#import "blocks/footer.ftlh" as f>
 <@t.template user>
-    <h1 style="text-align: center">Учебные предметы</h1>
+    <h1 style="text-align: center">Учебные курсы</h1>
     <hr>
 
     <#if user.isAdmin()>
-    <a class="btn btn-dark mt-3 mb-3 texture" style="text-align: center; width: 100%"
-       data-toggle="collapse" href="#collapseExample" role="button"
-       aria-expanded="true" aria-controls="collapseExample">
-        Добавить новый предмет
-    </a>
+        <button class="btn btn-dark mt-3 mb-3 for-button" style="text-align: center; width: 100%"
+                data-toggle="collapse" data-target="#collapseExample" aria-expanded="true"
+                aria-controls="collapseExample">
+            Добавить новый курс
+        </button>
     <div class="collapse mb-3" id="collapseExample" style="">
 
         <form action="/course/create" method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="courseName">Название предмет</label>
+                <label for="courseName">Номер группы</label>
                 <input type="text" required class="form-control"
                        id="courseName" name="title">
             </div>
@@ -39,7 +39,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="description">Описание предмета</label>
+                <label for="description">Описание курса</label>
                 <textarea required class="form-control" id="description" name="description"></textarea>
             </div>
             <div class="form-group">
@@ -62,33 +62,32 @@
             </div>
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
 
-            <button type="submit" style="width: 100%" class="btn btn-dark texture">Добавить</button>
+            <button type="submit" style="width: 100%" class="btn btn-dark for-button">Добавить</button>
         </form>
         </#if>
     </div>
+
     <div class="card-columns">
         <#list courses as course>
-            <a href="/course/${course.id}" class="course-link">
-                <div class="card text-white bg-dark my-3 course texture">
-                    <div class="card-top">
-                        <form action="/course/delete/${course.id}" method="post">
-                            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                            <button type="submit" class="btn m-3 textureY">
-                                Удалить
-                            </button>
-                        </form>
-                    </div>
-                    <img src="/images/${course.previewImageId}"
-                         class="card-img-top">
-                    <div class="card-body">
+<#--            <a href="/territory/${territory.id}" class="course-link">-->
+            <div class="card text-white bg-dark my-3 course textureCard" style="height: 400px;"> <!-- Установите нужную высоту -->
+                <div class="card-top">
+                    <img src="/images/${course.previewImageId}" class="card-img-top" style="height: 200px; object-fit: cover;"> <!-- Задайте нужную высоту -->
+                </div>
+
+                <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10px; position: relative; height: 200px;">
+                    <div>
                         <h5 class="card-title">${course.title}</h5>
                         <p class="card-text">${course.hours} ч.</p>
                     </div>
-                    <div class="card-footer">
-                        ${course.territory}
-                    </div>
+                    <form action="/course/delete/${course.id}" method="post" style="margin-top: auto; text-align: right;">
+                        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                        <button type="submit" class="btn btn-danger for-button">
+                            Удалить
+                        </button>
+                    </form>
                 </div>
-            </a>
+            </div>
         <#else>
             <h1 style="text-align: center">Не найдено</h1>
         </#list>
