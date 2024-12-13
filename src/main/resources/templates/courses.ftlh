@@ -102,6 +102,99 @@
         </#list>
     </div>
 
+
+    <br><br><h2 style="text-align: center">Где мы есть:</h2><hr>
+    <div class="row">
+        <div class="col-md-6 col-lg-3">
+            <div class="card-shadow-danger mb-3 widget-chart widget-chart2 text-left card bg-dark">
+                <div class="widget-content">
+                    <div class="widget-content-outer">
+                        <div class="widget-content-wrapper">
+                            <div class="widget-content-left pr-2 fsize-1">
+                                <div class="widget-numbers mt-0 fsize-3"> <a style="color: aliceblue">${percentMinsk}%</a> </div>
+                            </div>
+                            <div class="widget-content-right w-100">
+                                <div class="progress-bar-xs progress">
+                                    <div class="progress-bar textureY" role="progressbar" aria-valuenow="${percentMinsk}" aria-valuemin="0" aria-valuemax="100" style="width: ${percentMinsk}%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content-left fsize-1">
+                            <div class="text-muted opacity-6"><a style="color: aliceblue">Минск</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card-shadow-success mb-3 widget-chart widget-chart2 text-left card  bg-dark">
+                <div class="widget-content">
+                    <div class="widget-content-outer">
+                        <div class="widget-content-wrapper">
+                            <div class="widget-content-left pr-2 fsize-1">
+                                <div class="widget-numbers mt-0 fsize-3 "><a style="color: aliceblue">${percentGomel}%</a> </div>
+                            </div>
+                            <div class="widget-content-right w-100">
+                                <div class="progress-bar-xs progress">
+                                    <div class="progress-bar textureY" role="progressbar" aria-valuenow="${percentGomel}" aria-valuemin="0" aria-valuemax="100" style="width: ${percentGomel}%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content-left fsize-1">
+                            <div class="text-muted opacity-6"><a style="color: aliceblue">Гомель</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card-shadow-success mb-3 widget-chart widget-chart2 text-left card bg-dark">
+                <div class="widget-content">
+                    <div class="widget-content-outer">
+                        <div class="widget-content-wrapper">
+                            <div class="widget-content-left pr-2 fsize-1">
+                                <div class="widget-numbers mt-0 fsize-3 "><a style="color: aliceblue">${percentGrodno}%</a> </div>
+                            </div>
+                            <div class="widget-content-right w-100">
+                                <div class="progress-bar-xs progress">
+                                    <div class="progress-bar textureY" role="progressbar" aria-valuenow="${percentGrodno}" aria-valuemin="0" aria-valuemax="100" style="width: ${percentGrodno}%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content-left fsize-1">
+                            <div class="text-muted opacity-6"><a style="color: aliceblue">Гродно</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card-shadow-success mb-3 widget-chart widget-chart2 text-left card  bg-dark">
+                <div class="widget-content">
+                    <div class="widget-content-outer">
+                        <div class="widget-content-wrapper">
+                            <div class="widget-content-left pr-2 fsize-1">
+                                <div class="widget-numbers mt-0 fsize-3 "><a style="color: aliceblue">${percentVitebsk}%</a> </div>
+                            </div>
+                            <div class="widget-content-right w-100">
+                                <div class="progress-bar-xs progress">
+                                    <div class="progress-bar textureY" role="progressbar" aria-valuenow="${percentVitebsk}" aria-valuemin="0" aria-valuemax="100" style="width: ${percentVitebsk}%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content-left fsize-1">
+                            <div class="text-muted opacity-6"><a style="color: aliceblue">Витебск</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div style="text-align: right">
+    <button class="btn btn-light mx-2 for-button" style="flex-grow: 1; height: 50px;" type="button"
+            onclick="window.location.href = '/dashboard2'">Для руководства</button>
+    </div>
 </@t.template>
 <@f.template user>
 </@f.template>

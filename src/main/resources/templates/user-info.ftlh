@@ -18,7 +18,7 @@
     <div class="card-columns">
         <#list courses as course>
             <a href="/course/${course.id}" class="course-link">
-                <div class="card text-white bg-dark my-3 course">
+                <div class="card text-white bg-dark my-3 course textureCard">
 
                     <img src="/images/${course.previewImageId}"
                          class="card-img-top">

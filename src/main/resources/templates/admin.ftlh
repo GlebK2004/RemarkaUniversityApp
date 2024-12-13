@@ -3,7 +3,7 @@
 <@t.template user>
     `<h1 style="text-align: center">Панель администратора</h1><hr>
      <div style="text-align: center">
-    <br><button class="btn btn-dark mb-3 for-button" style="text-align: center; width: 50%;" onclick="location.href='/dashboard'">
+    <br><button class="btn btn-dark mb-3 for-button" style="text-align: center; width: 50%;" onclick="location.href='/dashboard2'">
     Аналитика
 </button><br>
     </div>

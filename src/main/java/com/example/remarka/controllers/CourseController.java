@@ -4,6 +4,7 @@ import com.example.remarka.models.Course;
 import com.example.remarka.models.User;
 import com.example.remarka.services.CourseService;
 import com.example.remarka.repositories.TerritoryRepository;
+import com.example.remarka.services.TerritoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +22,7 @@ import java.security.Principal;
 public class CourseController {
     private final CourseService courseService;
     private final TerritoryRepository territoryRepository;
+    private final TerritoryService territoryService;
 
     @GetMapping("/")
     public String courses(@RequestParam(name = "searchWord", required = false) String title, Principal principal, Model model) {
@@ -28,6 +30,10 @@ public class CourseController {
         model.addAttribute("user", courseService.getUserByPrincipal(principal));
         model.addAttribute("territories", territoryRepository.findAll());
         model.addAttribute("searchWord", title);
+        model.addAttribute("percentMinsk", territoryService.cityPercent("Минск"));
+        model.addAttribute("percentGomel", territoryService.cityPercent("Гомель"));
+        model.addAttribute("percentGrodno", territoryService.cityPercent("Гродно"));
+        model.addAttribute("percentVitebsk", territoryService.cityPercent("Витебск"));
         return "courses";
     }
 
